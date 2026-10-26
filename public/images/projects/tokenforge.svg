@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#a8b4c2" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#a8b4c2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#0d1117"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <g stroke="#c8d4e0" stroke-opacity="0.2">
+    <rect x="520" y="300" width="120" height="120" rx="14" fill="#0a0e14"/>
+    <rect x="660" y="300" width="120" height="120" rx="14" fill="#111820"/>
+    <rect x="800" y="300" width="120" height="120" rx="14" fill="#161c24"/>
+    <rect x="940" y="300" width="120" height="120" rx="14" fill="#1e2733"/>
+    <rect x="520" y="440" width="120" height="120" rx="14" fill="#2a3441"/>
+    <rect x="660" y="440" width="120" height="120" rx="14" fill="#3d4f61"/>
+    <rect x="800" y="440" width="120" height="120" rx="14" fill="#566373"/>
+    <rect x="940" y="440" width="120" height="120" rx="14" fill="#8896a6"/>
+    <rect x="520" y="580" width="120" height="120" rx="14" fill="#a8b4c2"/>
+    <rect x="660" y="580" width="120" height="120" rx="14" fill="#c8d4e0"/>
+    <rect x="800" y="580" width="120" height="120" rx="14" fill="#e2e8f0"/>
+    <rect x="940" y="580" width="120" height="120" rx="14" fill="#f0f4f8"/>
+  </g>
+
+  <g fill="none" stroke="#c8d4e0" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M420 380L340 500L420 620"/>
+    <path d="M1160 380L1240 500L1160 620"/>
+  </g>
+
+  <g font-family="monospace" font-size="18" fill="#a8b4c2" letter-spacing="4">
+    <text x="120" y="150" fill-opacity="0.55">--PF-SURFACE: #0D1117;</text>
+    <text x="120" y="190" fill-opacity="0.3">--PF-ACCENT: #A8B4C2;</text>
+  </g>
+</svg>

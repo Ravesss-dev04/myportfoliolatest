@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <pattern id="g" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0" fill="none" stroke="#c8d4e0" stroke-opacity="0.05"/>
+    </pattern>
+    <radialGradient id="glow" cx="60%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#a8b4c2" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#a8b4c2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8d4e0" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#c8d4e0" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#0d1117"/>
+  <rect width="1600" height="1000" fill="url(#g)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <g fill="url(#bar)" stroke="#c8d4e0" stroke-opacity="0.22">
+    <rect x="300" y="620" width="70" height="200" rx="4"/>
+    <rect x="420" y="560" width="70" height="260" rx="4"/>
+    <rect x="540" y="600" width="70" height="220" rx="4"/>
+    <rect x="660" y="500" width="70" height="320" rx="4"/>
+    <rect x="780" y="460" width="70" height="360" rx="4"/>
+    <rect x="900" y="400" width="70" height="420" rx="4"/>
+    <rect x="1020" y="340" width="70" height="480" rx="4"/>
+    <rect x="1140" y="280" width="70" height="540" rx="4"/>
+  </g>
+  <path d="M300 560L455 500L575 530L695 430L815 400L935 330L1055 270L1175 200L1300 170" fill="none" stroke="#c8d4e0" stroke-opacity="0.8" stroke-width="2.5"/>
+  <g fill="#0d1117" stroke="#c8d4e0" stroke-opacity="0.8" stroke-width="2">
+    <circle cx="695" cy="430" r="7"/>
+    <circle cx="1055" cy="270" r="7"/>
+    <circle cx="1300" cy="170" r="9"/>
+  </g>
+  <rect x="260" y="820" width="1080" height="1" fill="#c8d4e0" fill-opacity="0.25"/>
+
+  <g font-family="monospace" font-size="18" fill="#a8b4c2" letter-spacing="4">
+    <text x="120" y="150" fill-opacity="0.55">INVOICED &#183; $1,204,880</text>
+    <text x="120" y="190" fill-opacity="0.3">RECONCILED 100% &#183; 0 DUPLICATES</text>
+  </g>
+</svg>

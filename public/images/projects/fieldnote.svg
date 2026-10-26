@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <radialGradient id="glow" cx="40%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#a8b4c2" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#a8b4c2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#0d1117"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <g fill="none" stroke="#c8d4e0" stroke-linejoin="round">
+    <path d="M300 520c60-140 260-200 400-150s220 40 300-20 260-60 320 60-40 260-220 280-300-20-420 40-300 60-360-40-80-110-20-170z" stroke-opacity="0.38"/>
+    <path d="M360 520c50-110 220-160 340-120s190 30 260-16 220-46 270 50-34 210-186 226-256-16-356 34-254 48-304-34-68-90-24-140z" stroke-opacity="0.28"/>
+    <path d="M420 520c40-80 180-120 280-90s160 24 220-12 180-34 220 40-28 160-152 172-212-12-292 26-208 36-248-26-56-70-28-110z" stroke-opacity="0.2"/>
+    <path d="M480 520c30-50 140-80 220-60s130 18 180-8 140-22 170 30-22 110-118 118-168-8-228 18-162 24-192-18-44-50-32-80z" stroke-opacity="0.14"/>
+    <path d="M120 860c200-60 360-20 520-60s320-120 520-80 300 80 340 60" stroke-opacity="0.1"/>
+    <path d="M120 180c180 40 380 10 560 30s300 70 480 40 280-40 320-30" stroke-opacity="0.08"/>
+  </g>
+
+  <g fill="none" stroke="#c8d4e0" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 14" stroke-opacity="0.7">
+    <path d="M560 560C700 640 900 420 1120 500"/>
+  </g>
+  <g>
+    <circle cx="560" cy="560" r="10" fill="#0d1117" stroke="#c8d4e0" stroke-opacity="0.8" stroke-width="2"/>
+    <circle cx="1120" cy="500" r="14" fill="#0d1117" stroke="#4db8a6" stroke-opacity="0.8" stroke-width="2"/>
+    <circle cx="1120" cy="500" r="5" fill="#4db8a6" fill-opacity="0.9"/>
+  </g>
+
+  <g font-family="monospace" font-size="18" fill="#a8b4c2" letter-spacing="4">
+    <text x="120" y="150" fill-opacity="0.55">OFFLINE &#183; 14 OPS QUEUED</text>
+    <text x="120" y="190" fill-opacity="0.3">SYNC &#8594; OK &#183; 0 CONFLICTS</text>
+  </g>
+</svg>

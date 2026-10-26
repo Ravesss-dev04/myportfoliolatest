@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200" width="1920" height="1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="minor" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#a99aff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <pattern id="major" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="url(#minor)"/>
+      <path d="M200 0H0V200" fill="none" stroke="#a99aff" stroke-opacity="0.085" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.6" fill="#a99aff" fill-opacity="0.35"/>
+    </pattern>
+    <radialGradient id="fade" cx="50%" cy="48%" r="62%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#fff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="vignette">
+      <rect width="1920" height="1200" fill="url(#fade)"/>
+    </mask>
+    <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4f7fff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a99aff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#4f7fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7457e9" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#7457e9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1200" fill="#0b0a10"/>
+  <ellipse cx="960" cy="560" rx="760" ry="460" fill="url(#glow)"/>
+
+  <g mask="url(#vignette)">
+    <rect width="1920" height="1200" fill="url(#major)"/>
+
+    <g fill="none" stroke="#a99aff" stroke-opacity="0.09">
+      <circle cx="960" cy="600" r="180"/>
+      <circle cx="960" cy="600" r="300"/>
+      <circle cx="960" cy="600" r="440" stroke-dasharray="2 10"/>
+      <circle cx="960" cy="600" r="600" stroke-opacity="0.06"/>
+    </g>
+
+    <g fill="none" stroke="url(#trace)" stroke-width="1.2">
+      <path d="M200 400H600L680 480H960"/>
+      <path d="M1720 800H1320L1240 720H960"/>
+      <path d="M400 1000H760L840 920H1160L1240 1000H1560"/>
+      <path d="M360 200H720L800 280H1120L1200 200H1600"/>
+    </g>
+
+    <g fill="#a99aff">
+      <circle cx="600" cy="400" r="2.4" fill-opacity="0.5"/>
+      <circle cx="680" cy="480" r="2.4" fill-opacity="0.5"/>
+      <circle cx="1320" cy="800" r="2.4" fill-opacity="0.5"/>
+      <circle cx="1240" cy="720" r="2.4" fill-opacity="0.5"/>
+      <circle cx="840" cy="920" r="2" fill-opacity="0.4"/>
+      <circle cx="1160" cy="920" r="2" fill-opacity="0.4"/>
+      <circle cx="800" cy="280" r="2" fill-opacity="0.4"/>
+      <circle cx="1120" cy="280" r="2" fill-opacity="0.4"/>
+    </g>
+
+    <g fill="none" stroke="#a99aff" stroke-opacity="0.14">
+      <rect x="1400" y="360" width="120" height="80" rx="6"/>
+      <rect x="400" y="680" width="160" height="96" rx="6"/>
+      <path d="M1400 400H1340M560 728H640"/>
+    </g>
+  </g>
+</svg>

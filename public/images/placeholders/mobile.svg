@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a8b4c2" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#a8b4c2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#0d1117"/>
+  <ellipse cx="800" cy="500" rx="600" ry="420" fill="url(#glow)"/>
+  <g transform="translate(470 110)">
+    <rect width="300" height="620" rx="40" fill="#111820" stroke="#3d4f61" stroke-width="2"/>
+    <rect x="110" y="18" width="80" height="10" rx="5" fill="#2a3441"/>
+    <circle cx="150" cy="200" r="70" fill="none" stroke="#c8d4e0" stroke-opacity="0.4"/>
+    <circle cx="150" cy="200" r="40" fill="none" stroke="#c8d4e0" stroke-opacity="0.7"/>
+    <path d="M130 200l14 14 26-30" fill="none" stroke="#4db8a6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="50" y="320" width="200" height="16" rx="8" fill="#e2e8f0" fill-opacity="0.8"/>
+    <rect x="70" y="352" width="160" height="12" rx="6" fill="#566373"/>
+    <rect x="40" y="420" width="220" height="56" rx="10" fill="#1e2733" stroke="#2a3441"/>
+    <rect x="40" y="490" width="220" height="56" rx="10" fill="#1e2733" stroke="#2a3441"/>
+  </g>
+  <g transform="translate(830 170)">
+    <rect width="300" height="620" rx="40" fill="#111820" stroke="#3d4f61" stroke-width="2"/>
+    <rect x="110" y="18" width="80" height="10" rx="5" fill="#2a3441"/>
+    <g fill="#1e2733" stroke="#2a3441">
+      <rect x="30" y="70" width="240" height="90" rx="12"/>
+      <rect x="30" y="180" width="240" height="90" rx="12"/>
+      <rect x="30" y="290" width="240" height="90" rx="12"/>
+      <rect x="30" y="400" width="240" height="90" rx="12"/>
+    </g>
+    <g fill="#566373">
+      <rect x="54" y="98" width="140" height="12" rx="6"/>
+      <rect x="54" y="208" width="120" height="12" rx="6"/>
+      <rect x="54" y="318" width="150" height="12" rx="6"/>
+      <rect x="54" y="428" width="110" height="12" rx="6"/>
+    </g>
+    <rect x="30" y="530" width="240" height="56" rx="10" fill="#a8b4c2" fill-opacity="0.18" stroke="#a8b4c2" stroke-opacity="0.45"/>
+  </g>
+  <text x="800" y="940" text-anchor="middle" font-family="monospace" font-size="16" fill="#566373" letter-spacing="3">PLACEHOLDER &#8212; REPLACE WITH A REAL SCREENSHOT</text>
+</svg>

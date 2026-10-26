@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#c8d4e0" stroke-opacity="0.045"/>
+    </pattern>
+    <radialGradient id="glow" cx="45%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#a8b4c2" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#a8b4c2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fadeX" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c8d4e0" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#c8d4e0" stop-opacity="1"/>
+      <stop offset="80%" stop-color="#c8d4e0" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#c8d4e0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#0d1117"/>
+  <rect width="1600" height="1000" fill="url(#g)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <g fill="none" stroke="url(#fadeX)" stroke-linecap="round">
+    <path d="M0 420 C120 410 200 440 300 420 S480 380 560 420 640 470 720 420 820 300 880 420 980 520 1060 420 1240 400 1320 420 1500 440 1600 420" stroke-opacity="0.22" stroke-width="2"/>
+    <path d="M0 520 C120 510 220 540 320 520 S500 480 600 520 700 560 780 520 860 180 920 520 1020 600 1100 520 1300 500 1400 520 1600 520" stroke-opacity="0.65" stroke-width="2.5"/>
+    <path d="M0 620 C140 610 240 640 340 620 S520 590 620 620 740 650 840 620 940 560 1020 620 1220 640 1320 620 1500 600 1600 620" stroke-opacity="0.16" stroke-width="2"/>
+  </g>
+
+  <g>
+    <circle cx="920" cy="300" r="34" fill="none" stroke="#c05050" stroke-opacity="0.65" stroke-width="2"/>
+    <circle cx="920" cy="300" r="6" fill="#c05050" fill-opacity="0.8"/>
+    <path d="M920 334V500" stroke="#c05050" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+  </g>
+
+  <g font-family="monospace" font-size="18" letter-spacing="4">
+    <text x="120" y="150" fill="#a8b4c2" fill-opacity="0.55">ANOMALY SCORE 0.94</text>
+    <text x="120" y="190" fill="#a8b4c2" fill-opacity="0.3">GEO VELOCITY &#183; 2,140 KM/H</text>
+    <text x="960" y="292" fill="#c05050" fill-opacity="0.7" font-size="16">FLAGGED</text>
+  </g>
+
+  <g fill="#c8d4e0" fill-opacity="0.12">
+    <rect x="120" y="780" width="1360" height="1"/>
+    <rect x="120" y="740" width="40" height="40"/>
+    <rect x="180" y="720" width="40" height="60"/>
+    <rect x="240" y="700" width="40" height="80"/>
+    <rect x="300" y="730" width="40" height="50"/>
+    <rect x="360" y="690" width="40" height="90" fill-opacity="0.22"/>
+  </g>
+</svg>
