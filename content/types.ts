@@ -28,6 +28,7 @@ export interface ImageAsset {
 export interface Stat {
   value: string;
   label: string;
+  source?: "github-public-repos";
 }
 
 export interface Profile {

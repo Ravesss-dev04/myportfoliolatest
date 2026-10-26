@@ -1,66 +1,9 @@
 import Image from "next/image";
-import { Suspense } from "react";
+import { GitHubRepoCount } from "@/components/ui/GitHubRepoCount";
 import { PulseDot } from "@/components/ui/PulseDot";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { profile } from "@/content/profile";
-
-async function GitHubPublicRepoCount() {
-  let repoCount: number | null = null;
-
-  try {
-    const username = new URL(profile.github).pathname.split("/").filter(Boolean)[0];
-    if (!username) {
-      throw new Error("The GitHub profile URL does not contain a username.");
-    }
-
-    const response = await fetch(`https://api.github.com/users/${encodeURIComponent(username)}`, {
-      headers: {
-        Accept: "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-      next: { revalidate: 3600 },
-    });
-
-    if (!response.ok) {
-      throw new Error(`GitHub returned HTTP ${response.status}.`);
-    }
-
-    const data: unknown = await response.json();
-    if (
-      typeof data !== "object" ||
-      data === null ||
-      !("public_repos" in data) ||
-      typeof data.public_repos !== "number" ||
-      !Number.isSafeInteger(data.public_repos) ||
-      data.public_repos < 0
-    ) {
-      throw new Error("GitHub returned an invalid public repository count.");
-    }
-
-    repoCount = data.public_repos;
-  } catch (error) {
-    console.error("Unable to load the GitHub public repository count.", error);
-  }
-
-  if (repoCount === null) {
-    return (
-      <dd
-        className="font-mono text-2xl font-medium tracking-[-0.02em] text-white sm:text-[1.75rem]"
-        aria-label="GitHub repository count unavailable"
-        title="GitHub repository count unavailable"
-      >
-        Unavailable
-      </dd>
-    );
-  }
-
-  return (
-    <dd className="font-mono text-2xl font-medium tracking-[-0.02em] text-white sm:text-[1.75rem]">
-      {repoCount}
-    </dd>
-  );
-}
 
 function PortraitFrame() {
   return (
@@ -119,19 +62,8 @@ export function About() {
             {profile.stats.map((stat, index) => (
               <Reveal key={stat.label} delay={0.24 + index * 0.07} className="flex flex-col-reverse bg-pf-surface p-5 sm:p-6">
                 <dt className="mt-2 text-[11px] leading-snug text-white/45">{stat.label}</dt>
-                {stat.label === "Public GitHub repositories" ? (
-                  <Suspense
-                    fallback={
-                      <dd
-                        className="font-mono text-2xl font-medium tracking-[-0.02em] text-white sm:text-[1.75rem]"
-                        aria-label="Loading GitHub repository count"
-                      >
-                        …
-                      </dd>
-                    }
-                  >
-                    <GitHubPublicRepoCount />
-                  </Suspense>
+                {stat.source === "github-public-repos" ? (
+                  <GitHubRepoCount />
                 ) : (
                   <dd className="font-mono text-2xl font-medium tracking-[-0.02em] text-white sm:text-[1.75rem]">
                     {stat.value}

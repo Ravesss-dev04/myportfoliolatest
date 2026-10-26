@@ -40,7 +40,7 @@ export const profile: Profile = {
   // TODO: update with real numbers
   stats: [
     { value: "5+", label: "Connect with me " },
-    { value: "—", label: "Public GitHub repositories" },
+    { value: "—", label: "My Total Project Repository", source: "github-public-repos" },
     { value: "1 year", label: "years of experience as web developer" },
   ],
 };
