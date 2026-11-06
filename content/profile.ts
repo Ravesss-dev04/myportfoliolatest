@@ -26,7 +26,7 @@ export const profile: Profile = {
   // TODO: replace with your real contact details and links
   email: "hello@alexreyes.dev",
   github: "https://github.com/Ravesss-dev04",
-  linkedin: "https://www.linkedin.com/in/alexreyes",
+  linkedin: "https://www.linkedin.com/in/raven-prevendido-26b6a3288/",
   // TODO: replace public/resume.pdf with your real resume
   resumeUrl: "/resume.pdf",
   // TODO: set to your production domain (used for metadata, sitemap and JSON-LD)

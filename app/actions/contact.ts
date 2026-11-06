@@ -1,7 +1,24 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import { isIP } from "node:net";
+import { domainToASCII } from "node:url";
 import { contactSchema, readContactForm, validateContact, type ContactState } from "@/lib/contact-schema";
+
+function isValidSmtpHost(host: string): boolean {
+  if (/[\/@?#\s]/.test(host)) return false;
+  if (isIP(host)) return true;
+
+  const asciiHost = domainToASCII(host.endsWith(".") ? host.slice(0, -1) : host);
+  if (!asciiHost || asciiHost.length > 253) return false;
+
+  return asciiHost.split(".").every(
+    (label) =>
+      label.length > 0 &&
+      label.length <= 63 &&
+      /^[a-z\d](?:[a-z\d-]*[a-z\d])?$/i.test(label),
+  );
+}
 
 export async function sendContactMessage(_prev: ContactState, formData: FormData): Promise<ContactState> {
   // Honeypot: real users never see or fill this field.
@@ -27,7 +44,7 @@ export async function sendContactMessage(_prev: ContactState, formData: FormData
   const recipient = process.env.CONTACT_RECIPIENT_EMAIL?.trim();
   const configurationProblems: string[] = [];
 
-  if (!smtpHost) configurationProblems.push("SMTP_HOST");
+  if (!smtpHost || !isValidSmtpHost(smtpHost)) configurationProblems.push("SMTP_HOST");
   if (!smtpPortValue || !Number.isInteger(smtpPort) || smtpPort < 1 || smtpPort > 65535) {
     configurationProblems.push("SMTP_PORT");
   }
@@ -78,9 +95,19 @@ export async function sendContactMessage(_prev: ContactState, formData: FormData
       };
     }
   } catch (error) {
-    const code =
-      error instanceof Error && "code" in error && typeof error.code === "string" ? error.code : "UNKNOWN";
-    console.error("[contact] email submission failed", { code });
+    const details =
+      error instanceof Error
+        ? {
+            code: "code" in error && typeof error.code === "string" ? error.code : "UNKNOWN",
+            syscall: "syscall" in error && typeof error.syscall === "string" ? error.syscall : undefined,
+            command: "command" in error && typeof error.command === "string" ? error.command : undefined,
+            responseCode:
+              "responseCode" in error && typeof error.responseCode === "number"
+                ? error.responseCode
+                : undefined,
+          }
+        : { code: "UNKNOWN" };
+    console.error("[contact] email submission failed", details);
     return {
       status: "error",
       message: "Your message could not be sent. Please try again later.",
