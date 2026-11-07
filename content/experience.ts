@@ -13,6 +13,7 @@ export const experience: ExperienceEntry[] = [
       "Contributed to an e-commerce system supporting company operations, online product presentation, and customer ordering.",
     ],
   },
+// this is the comment i want to ask this coment so that
   {
     role: "Software Developer",
     org: "OnTap Creatives",
@@ -24,7 +25,9 @@ export const experience: ExperienceEntry[] = [
       "Implemented database-driven workflows and multi-role access with Next.js, React, TypeScript, Tailwind CSS, Prisma ORM, MySQL, and REST APIs, including analytics and inquiries.",
       "Developed reusable, responsive interfaces and integrated backend services, handling data fetching, validation, loading and error states, and role-based views.",
     ],
+    
   },
+
   {
     role: "BS Information Technology",
     org: "Pamantasan ng Lungsod ng Muntinlupa",
